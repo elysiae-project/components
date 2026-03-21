@@ -1,0 +1,33 @@
+name: Update Component files
+
+on:
+  workflow_dispatch:
+  # schedule:
+  # - cron: "0 */2 * * *"
+
+jobs:
+  update-components:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.JS
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Update Files
+        run: node updateComponents.js
+
+      - name: Push changes to repository
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -m "Update Elysiae Components" || echo "No Changes necessary"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
