@@ -3,7 +3,7 @@ name: Update Component files
 on:
   workflow_dispatch:
   schedule:
-   - cron: "0 */6 * * *"
+    - cron: "0 */6 * * *"
 
 jobs:
   update-components:
@@ -27,6 +27,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git commit -m "Update Elysiae Components" && git push origin HEAD:main|| echo "No Changes necessary"
+          git add -A
+          git commit -m "Update Elysiae Components" && git push origin HEAD:main || echo "No Changes necessary"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -64,11 +64,11 @@ const updateJson = (tag, downloadURL, digest, file) => {
     hash: digest,
   };
   const path = join("components", file);
-  const contents = JSON.parse(readFileSync(path), null, 2);
+  const contents = JSON.parse(readFileSync(path));
 
   if (JSON.stringify(contents[0]) !== JSON.stringify(newContent)) {
     contents.unshift(newContent);
-    writeFileSync(path, JSON.stringify(contents));
+    writeFileSync(path, JSON.stringify(contents, null, 2));
   } else console.log(`${file} does not need to be updated, skipping`);
 };
 
