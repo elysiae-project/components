@@ -1,9 +1,12 @@
 name: Update Component files
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update-components.yml"
   schedule:
     - cron: "0 */6 * * *"
+  workflow_dispatch:
 
 jobs:
   update-components:
