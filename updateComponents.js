@@ -11,10 +11,10 @@ const githubAssetInfo = [
     saveTo: "dxvk.json",
     repo: "doitsujin/dxvk",
   },
-  {
+  /*{
     saveTo: "vkd3d.json",
     repo: "HansKristian-Work/vkd3d-proton",
-  },
+  },*/
 ];
 
 /**
