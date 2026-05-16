@@ -88,18 +88,4 @@ const updateJson = (tag, downloadURL, digest, file) => {
       updateJson(tag, url, digest, item.saveTo);
     }),
   );
-
-  // Jadeite done seperately because codeberg's api stinks and also doesn't have any sha256 digest that I can take from.
-  // also no way to verify the content type of assets
-  const jadeiteResponse = await (
-    await fetch(
-      "https://codeberg.org/api/v1/repos/mkrsym1/jadeite/releases/latest",
-    )
-  ).json();
-
-  const tag = jadeiteResponse.tag_name;
-  const downloadURL = jadeiteResponse.assets[0].browser_download_url;
-  const digest = await calculateHashFromURL(downloadURL);
-
-  updateJson(tag, downloadURL, digest, "jadeite.json");
 })();
