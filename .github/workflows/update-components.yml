@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/update-components.yml"
+      - "updateComponents.js"
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
