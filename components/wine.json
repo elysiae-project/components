@@ -1,5 +1,10 @@
 [
   {
+    "tag": "spritz-wine-11.9-2",
+    "download_url": "https://github.com/NelloKudo/spritz-wine/releases/download/spritz-wine-11.9-2/spritz-wine-tkg-staging-wow64-11.9-2-x86_64.tar.xz",
+    "hash": "c33eacb38b5683eaa1d55ce175505efefc8c9a221974dd6514653e1c26d2bf62"
+  },
+  {
     "tag": "spritz-wine-tkg-11.8-1",
     "download_url": "https://github.com/NelloKudo/spritz-wine-aur/releases/download/spritz-wine-tkg-11.8-1/spritz-wine-tkg-staging-wow64-11.8-1-x86_64.tar.xz",
     "hash": "317e2ff104e08423806e712afcadbd35354f3525836a357406e5dd40f52bb28d"
