@@ -5,7 +5,7 @@ import { createHash } from "node:crypto";
 const githubAssetInfo = [
   {
     saveTo: "wine.json",
-    repo: "NelloKudo/spritz-wine-aur",
+    repo: "NelloKudo/spritz-wine",
   },
   {
     saveTo: "dxvk.json",
