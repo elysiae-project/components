@@ -2,20 +2,12 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
 
+// Proton comes bundled with dxvk and vkd3d. they are no longer needed
 const githubAssetInfo = [
   {
-    saveTo: "wine.json",
-    repo: "NelloKudo/spritz-wine",
-  },
-  {
-    saveTo: "dxvk.json",
-    repo: "doitsujin/dxvk",
-  },
-  // Unneeded for the time being
-  /*{
-    saveTo: "vkd3d.json",
-    repo: "HansKristian-Work/vkd3d-proton",
-  },*/
+    saveTo: "proton.json",
+    repo: "GloriousEggroll/proton-ge-custom",
+  }
 ];
 
 /**
