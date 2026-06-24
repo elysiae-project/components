@@ -1,5 +1,10 @@
 [
   {
+    "tag": "GE-Proton11-1",
+    "download_url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-1/GE-Proton11-1.tar.gz",
+    "hash": "ce6dd663ea01725a31805ed5c165723a253cdf0945a6642907330742ae2de5e4"
+  },
+  {
     "tag": "GE-Proton10-34",
     "download_url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton10-34/GE-Proton10-34.tar.gz",
     "hash": "51c580b66a833c73998fe00f0717eeac57197654040a2f2ed5189e3ee68d773d"
